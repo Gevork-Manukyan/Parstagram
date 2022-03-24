@@ -21,13 +21,14 @@ class MainActivity : AppCompatActivity() {
         val query: ParseQuery<Post> = ParseQuery.getQuery(Post::class.java)
 
         // Find all Post objects
+        query.include(Post.KEY_USER)
         query.findInBackground(object: FindCallback<Post> {
             override fun done(posts: MutableList<Post>?, e: ParseException?) {
                 if (e == null) {
 
                     if (posts != null) {
                         for (post in posts) {
-                            Log.i(TAG, "Post: " + post.getDescription())
+                            Log.i(TAG, "Post: " + post.getDescription() + " , username: " + post.getUser()?.username)
                         }
                     }
 
