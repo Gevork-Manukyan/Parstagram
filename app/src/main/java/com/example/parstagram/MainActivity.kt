@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.parstagram.framents.ComposeFragment
 import com.example.parstagram.framents.FeedFragment
+import com.example.parstagram.framents.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.parse.*
 import java.io.File
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.action_profile -> {
-
+                    fragmentToShow = ProfileFragment()
                 }
             }
 
@@ -69,34 +70,8 @@ class MainActivity : AppCompatActivity() {
 //            finish()
 //        }
 
-        queryPosts()
     }
 
-
-    fun queryPosts() {
-
-        // Specify class for query
-        val query: ParseQuery<Post> = ParseQuery.getQuery(Post::class.java)
-
-        // Find all Post objects
-        query.include(Post.KEY_USER)
-        query.findInBackground(object: FindCallback<Post> {
-            override fun done(posts: MutableList<Post>?, e: ParseException?) {
-                if (e == null) {
-
-                    if (posts != null) {
-                        for (post in posts) {
-                            Log.i(TAG, "Post: " + post.getDescription() + " , username: " + post.getUser()?.username)
-                        }
-                    }
-
-                } else {
-                    Log.e(TAG, "Error fetching posts")
-                    e.printStackTrace()
-                }
-            }
-        })
-    }
 
     companion object {
         const val TAG = "MainActivity"
