@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/gevor/AndroidStudioProjects/Parstagram/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.5703125" />
         <entry key="..\:/Users/gevor/AndroidStudioProjects/Parstagram/app/src/main/res/layout/activity_login.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/gevor/AndroidStudioProjects/Parstagram/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/gevor/AndroidStudioProjects/Parstagram/app/src/main/res/layout/fragment_compose.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/gevor/AndroidStudioProjects/Parstagram/app/src/main/res/layout/fragment_feed.xml" value="0.5385416666666667" />
+        <entry key="..\:/Users/gevor/AndroidStudioProjects/Parstagram/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/gevor/AndroidStudioProjects/Parstagram/app/src/main/res/xml/fileprovider.xml" value="0.5541666666666667" />
       </map>
     </option>
